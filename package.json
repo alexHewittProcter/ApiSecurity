@@ -2,9 +2,11 @@
   "name": "apisecurity",
   "version": "1.0.0",
   "description": "A library to protect api's from brute force attacks",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel src --out-dir dist",
+    "test": "./node_modules/.bin/mocha",
+    "start": "npm run build && npm run test"
   },
   "repository": {
     "type": "git",
@@ -18,5 +20,15 @@
   "bugs": {
     "url": "https://github.com/alexHewittProcter/ApiSecurity/issues"
   },
-  "homepage": "https://github.com/alexHewittProcter/ApiSecurity#readme"
+  "homepage": "https://github.com/alexHewittProcter/ApiSecurity#readme",
+  "dependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0"
+  }
 }
