@@ -13,5 +13,4 @@ export class ApiSecurity {
     loginSucceed(email) {
         this.loginEndpoint.loginSucceed(email);
     }
-
 }
